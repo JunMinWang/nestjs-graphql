@@ -10,7 +10,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
+    "start:dev": "/bin/bash start-pgsql.sh && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -26,11 +26,15 @@
     "@nestjs/core": "^8.0.0",
     "@nestjs/graphql": "^10.0.15",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/typeorm": "^8.1.2",
     "apollo-server-express": "^3.8.2",
+    "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "typeorm": "^0.3.6"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
