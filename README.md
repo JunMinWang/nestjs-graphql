@@ -1,5 +1,7 @@
 ```shell
 npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
+
+npm i class-validator class-transformer
 ```
 
 # GraphQL

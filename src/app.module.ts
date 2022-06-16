@@ -6,6 +6,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { PetsModule } from './pets/pets.module';
 import { join } from 'path/posix';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { OwnersModule } from './owners/owners.module';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -27,6 +28,7 @@ dotenv.config();
       "entities": ["dist/**/*.entity.js"]
     }),
     PetsModule,
+    OwnersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
